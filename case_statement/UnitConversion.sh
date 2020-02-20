@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter Number :' number
 echo "Enter 1 for feet to inch"
 echo "Enter 2 for feet to meter"
