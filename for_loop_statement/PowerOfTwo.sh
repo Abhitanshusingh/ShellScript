@@ -1,8 +1,9 @@
+#!/bin/bash -x
 read -p 'Enter Number :' number
-power=$(( 2**number ))
-p=2
-for(( i=1 ; p <= $power ; i++ ))
+temp_power=$(( 2**number ))
+power=2
+for(( iter=1 ; power <= $temp_power ; iter++ ))
 do 
-   echo "$p"
-   p=$(( p*2 ))
+   echo "$power"
+   power=$(( power*2 ))
 done 
