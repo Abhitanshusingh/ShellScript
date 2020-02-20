@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter One Digit Number :' digit
 if (( $digit >= 10 ))
 then
