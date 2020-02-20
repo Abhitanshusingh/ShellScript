@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter One Digit number :' number
 case "$number" in 
     0) echo "Zero"
