@@ -1,4 +1,4 @@
-
+#!/bin/bash -x
 feet=`echo  "scale=2 ; 42/12" | bc -l`
 echo "42 inches is : $feet  feet"
 
