@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter Number :' digit
 if(( $digit > 999 && $digit < 9999 ))     
 then
