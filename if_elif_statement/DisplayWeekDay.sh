@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter number :' day
 if(( $day == 0 ))
 then
