@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter Year : ' year
 if (( year <= 999 ))
 then
