@@ -1,4 +1,5 @@
-echo $1 $2 $3
+#!/bin/bash -x
+echo $1 $2 $3       #Command-line argument
 day=$1
 month=$2
 year=$3
