@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Day : " day  #( 0 Sunday , 1 Monday ,2 Tuesday ...)
 case "$day" in
      0) echo "Sunday"
