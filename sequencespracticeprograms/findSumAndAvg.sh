@@ -1,3 +1,4 @@
+#!/bin/bash -x
 random1=$((RANDOM%99+1))
 random2=$((RANDOM%99+1))
 random3=$((RANDOM%99+1))
