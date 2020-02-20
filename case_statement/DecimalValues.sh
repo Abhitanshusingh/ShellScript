@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p "Enter Number : " digit
 length=${#digit}
 case $length in
