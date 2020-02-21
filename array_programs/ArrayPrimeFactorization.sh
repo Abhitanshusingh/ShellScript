@@ -1,3 +1,4 @@
+#!/bin/bash -x
 read -p 'Enter Number :' number
 i=0
 for(( iter=2 ; $number > 1; iter++ ))
