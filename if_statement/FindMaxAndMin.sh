@@ -24,6 +24,10 @@ if (( "$max < $random4" ))
 then
    max=$random4
 fi
+if (( "$max < $random5" ))
+then
+   max=$random5
+fi
 echo "Maximum value is : $max"
 
 min=$random1
@@ -38,6 +42,10 @@ fi
 if (( "$min > $random4" ))
 then
    min=$random4
+fi
+if (( "$min > $random5" ))
+then
+   min=$random5
 fi
 echo "Minimum value is : $min"
 
