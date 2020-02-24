@@ -9,10 +9,9 @@ do
 		while((  $number%$iterator==0 ))
 		do
 			number=$(( number/iterator ))
-         arr[temp]=$iterator
+         arr[temp]=$iterator			#Initilize in array
 			temp=$(( temp+1 ))
 		done
 	fi
 done
-#Initilize in array
 echo "${arr[@]}"
