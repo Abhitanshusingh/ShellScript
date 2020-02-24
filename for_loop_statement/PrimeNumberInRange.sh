@@ -2,12 +2,12 @@
 echo "Enter Range "
 read start
 read end
-for (( i1=$start ; i1<=$end ; i++ ))
+for (( iterator1=$start ; iterator1<=$end ; iterator1++ ))
 do
    temp=0
-   for(( j=2 ; j<$i ; j++ ))
+   for(( iterator2=2 ; iterator2<$iterator1 ; iterator2++ ))
    do 
-      if (( $(( i%j ))==0 ))
+      if (( $(( iterator1%iterator2 ))==0 ))
       then
          temp=1
          break 
@@ -15,7 +15,7 @@ do
    done
 if (( $temp==0 ))
 then
-   echo "Prime Number : $i "
+   echo "Prime Number : $iterator1 "
 fi
 done
 
