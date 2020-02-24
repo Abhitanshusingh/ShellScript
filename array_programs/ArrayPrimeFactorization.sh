@@ -1,16 +1,18 @@
 #!/bin/bash -x
-read -p 'Enter Number :' number
-i=0
-for(( iter=2 ; $number > 1; iter++ ))
+read -p 'Enter number :' number
+#prime factorization logic
+temp=0
+for(( iterator=2 ; $number > 1; iterator++ ))
 do 
-	if(( $number%$iter == 0 ))
+	if(( $number%$iterator == 0 ))
 	then
-		while((  $number%$iter==0 ))
+		while((  $number%$iterator==0 ))
 		do
-			number=$(( number/iter ))
-                        arr[i]=$iter
-			i=$(( i+1 ))
+			number=$(( number/iterator ))
+         arr[temp]=$iterator
+			temp=$(( temp+1 ))
 		done
 	fi
 done
+#Initilize in array
 echo "${arr[@]}"
