@@ -1,5 +1,6 @@
 #!/bin/bash -x
 read -p 'Enter number :' day
+#logic for print week days 0 for Sunday 1 for monday and so on 
 if(( $day == 0 ))
 then
    echo "Sunday"
