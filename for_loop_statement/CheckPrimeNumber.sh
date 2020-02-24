@@ -1,9 +1,10 @@
 #!/bin/bash -x
 read -p 'Enter Number :' number
 temp=0
-for(( iter=2 ; iter<=$number/2 ; iter++ ))
+#Logic for prime number
+for(( iterator=2 ; iterator<=$number/2 ; iterator++ ))
 do 
-   if (( $(( number%iter ))==0 ))
+   if (( $(( number%iterator ))==0 ))
    then
        temp=1
        break 
@@ -11,7 +12,7 @@ do
 done
 if (( $temp==0 ))
 then
-   echo "Prime Number : $iter"
+   echo "Prime Number : $number"
 else
-   echo "Not Prime Number :$iter "
+   echo "Not Prime Number :$number "
 fi
