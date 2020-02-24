@@ -1,4 +1,5 @@
 #!/bin/bash -x
+#Generating three digit five random number
 random1=$((RANDOM%900+100))
 random2=$((RANDOM%900+100))
 random3=$((RANDOM%900+100))
@@ -10,7 +11,7 @@ echo "$random2"
 echo "$random3"
 echo "$random4"
 echo "$random5"
-
+#Logic for find maximum number
 max=$random1
 if (( "$max < $random2" ))
 then
@@ -30,6 +31,7 @@ then
 fi
 echo "Maximum value is : $max"
 
+#Logic for finding minimum number
 min=$random1
 if (( "$min > $random2" ))
 then
@@ -48,4 +50,3 @@ then
    min=$random5
 fi
 echo "Minimum value is : $min"
-
