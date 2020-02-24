@@ -1,6 +1,7 @@
 #!/bin/bash -x
 read -p 'Enter first number to check palindrom  :  ' first_number
 read -p 'Enter second number to check palindrom : ' second_number
+#function check number is palindrom or not
 function isPalindrom() 
 {
    number1=$1
@@ -16,7 +17,7 @@ function isPalindrom()
    then
       echo "Palindrom "
    else
-      echo "Not Palindrom"
+      echo "Not palindrom"
    fi
 }
 result="$( isPalindrom $first_number $second_number)"
