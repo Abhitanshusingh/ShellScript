@@ -1,5 +1,6 @@
 #!/bin/bash -x
 read -p 'Enter One Digit number :' number
+#Convert single digit into word
 case "$number" in 
     0) echo "Zero"
        ;;
@@ -21,5 +22,5 @@ case "$number" in
        ;;
     9) echo "Nine"
        ;;
-    *) echo "Enter Valid Number"
+    *) echo "Enter valid number"
 esac
