@@ -8,8 +8,8 @@ do
 	then
 		while((  $number%$iterator==0 ))
 		do
-			number=$(( number/iterator ))
-         arr[temp]=$iterator			#Initilize in array
+			number=$(( number/iterator ))    
+			arr[temp]=$iterator			#Initilize in array
 			temp=$(( temp+1 ))
 		done
 	fi
