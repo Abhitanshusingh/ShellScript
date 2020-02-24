@@ -1,5 +1,5 @@
 #!/bin/bash -x
-read -p "Enter Day : " day  #( 0 Sunday , 1 Monday ,2 Tuesday ...)
+read -p "Enter Day : " day  #( 0 Sunday , 1 Monday ,2 Tuesday and so on ...)
 case "$day" in
      0) echo "Sunday"
         ;;
