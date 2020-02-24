@@ -7,5 +7,5 @@ for(( iterator=1 ; iterator <= "$userInput" ; iterator++ ))
 do
    harmonicNumber=`echo "scale=4; $harmonicNumber + 1 / $iterator" | bc -l`	#using scale to print only 4 digit fractional value
 done
-echo "$harmonicNumber"
+echo "Harmonic of $userInput is : $harmonicNumber"
 
