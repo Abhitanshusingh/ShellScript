@@ -3,7 +3,7 @@ read -p 'Enter Number : ' user_number
 loop=0        								  #counting how much time method call
 function isPrimeNumber()
 {
-  number=$1
+	number=$1
 	temp=0
 	for(( iter=2 ; iter <= $((number/2)) ; iter++ ))
 	do
@@ -18,9 +18,9 @@ function isPrimeNumber()
 		loop=$(( loop+1 ))
       echo "Prime Number $number"
 		loop=$(( loop+1 ))
-         if (( $loop <=2 ))                                               #using this condition to call palindrom method only two time 
+         if (( $loop <=2 ))                        #using this condition to call palindrom method only two time 
          then
-		      isPalindrom $number
+		      isPalindrom $number							#Calling isPalindrom method
          fi
 	else
   	   echo "Not Prime Number $number" 
@@ -43,7 +43,7 @@ function isPalindrom()
    if(( $(( reverse == temp)) ))
    then
       echo "is palindrom $reverse"
-		isPrimeNumber $reverse
+		isPrimeNumber $reverse							#Calling isPrimeNumber function
    else
       echo "Not palindrom "
    fi
