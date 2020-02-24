@@ -1,6 +1,7 @@
 #!/bin/bash -x
 read -p 'Enter Number :' digit
-if(( $digit > 999 && $digit < 9999 ))     
+#Logic for printing place value
+if(( $digit > 999 && $digit <= 9999 ))    	#Take only four digit number 
 then
    number=$(( $digit % 10 )) 
    echo "$number : unit"
@@ -21,7 +22,7 @@ then
 fi
 
 
-if(( $digit > 99 && $digit < 999 ))    
+if(( $digit > 99 && $digit <= 999 ))    #Take only three digit number 
 then
    number=$(( $digit % 10 )) 
    echo "$number : unit"
@@ -38,7 +39,7 @@ then
 fi
 
 
-if(( $digit > 9 && $digit < 99 ))  
+if(( $digit > 9 && $digit <= 99 ))   	#take only two digit number
 then
    number=$(( $digit % 10 )) 
    echo "$number : unit"
@@ -50,7 +51,7 @@ then
 fi
 
 
-if(( $digit > 0 && $digit < 9 ))   #for 10
+if(( $digit > 0 && $digit <= 9 ))   	 #take only one digit number
 then
    number=$(( $digit % 10 )) 
    echo "$number : unit"
