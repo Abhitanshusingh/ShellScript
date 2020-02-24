@@ -1,7 +1,7 @@
 #!/bin/bash -x
 while(( 0==0 ))
 do
-   head=$((RANDOM%2+1))
+   head=$((RANDOM%2+1))			#generating 1 and 2 
    tail=$((RANDOM%2+1))
    count_head=$(( count_head + head ))
    count_tail=$(( count_tail + tail ))
