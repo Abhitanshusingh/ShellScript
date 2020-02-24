@@ -1,12 +1,14 @@
 #!/bin/bash -x
-echo $1 $2 $3       #Command-line argument
+echo $1 $2 $3       						#Command-line argument
 day=$1
 month=$2
 year=$3
-y0=$(( year - (( 14 - month )) / 12 ))
+
+y0=$(( year - (( 14 - month )) / 12 ))				#Using logic to get week days 1 for sunday 2 for monday and so on ..
 x=$(( y0 + (( y0 / 4 )) - (( y0 / 100 )) + (( y0 / 400 )) ))
 m0=$(( month + 12 * (( (( 14 - month )) / 12 )) - 2 ))
 d0=$(( (( day + x + 31*m0 / 12 )) % 7 ))
+
 if(( $d0 == 0 ))
 then
    echo "Sunday"
