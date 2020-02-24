@@ -1,13 +1,14 @@
 #!/bin/bash -x
-read -p 'Enter number to find prime factorization :'  number
-for(( iter=2 ; $number > 1; iter++ ))
+read -p 'Enter number to find prime factorization :'  userInput
+#logic for prime factorization
+for(( iterator=2 ; $userInput > 1; iterator++ ))
 do 
-	if(( $number%$iter == 0 ))
+	if(( $userInput%$iterator == 0 ))
 	then
-		for(( ; $number%$iter==0; ))
+		for(( ; $userInput%$iterator==0;  ))
 		do
-			echo "$iter"
-			number=$(( number/iter ))
+			echo "$iterator"
+			userInput=$(( userInput/iterator ))
 		done
 	fi
 done
