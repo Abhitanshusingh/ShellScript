@@ -1,8 +1,9 @@
 #!/bin/bash -x
-read -p 'Enter Number :' number
-temp_power=$(( 2**number ))
+read -p 'Enter Number :' userInput
+tempPower=$(( 2**userInput ))		#using ** to get power of number
 power=2
-for(( iter=1 ; power <= $temp_power ; iter++ ))
+#logic to print power of 2
+for(( iteraot=1 ; power <= $tempPower ; iterator++ ))
 do 
    echo "$power"
    power=$(( power*2 ))
