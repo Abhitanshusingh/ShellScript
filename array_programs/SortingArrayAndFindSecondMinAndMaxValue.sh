@@ -1,25 +1,26 @@
 #!/bin/bash -x
-echo "Generatinf ten random value" 
+echo "Generating ten random value" 
 for(( i=0 ; i < 10 ; i++ ))
 	do
-	arr[i]=$((RANDOM%900+100))
+	array[i]=$((RANDOM%900+100))   #Generationg 1 to 100  number
 	done
-echo "${arr[@]}"
+echo "${array[@]}"
 
+#Using insertion sort
 for(( i=1; i<10; i++ ))
 do
-	temp=${arr[i]}
+	temp=${array[i]}
 	j=$i-1
-		while(( $j>=0 && ${arr[j]} > $temp ))
+		while(( $(( j>=0 )) && ${array[j]} > $temp ))
 		do
-			arr[j+1]=${arr[j]}
-			j=$j-1
+			array[j+1]=${array[j]}
+			j=$(( j-1 ))
 		done
-	arr[j+1]=$temp
+	array[j+1]=$temp
 done
 
-echo "${arr[@]}"
-array_length=${#arr[@]}   
-echo "Second largest number is :  ${arr[array_length-2]}"
-echo "Second smallest number is : ${arr[1]}"
+echo "${array[@]}"
+array_length=${#array[@]}  	 #length of array
+echo "Second largest number is :  ${array[array_length-2]}"   	#printing second last element of array
+echo "Second smallest number is : ${array[1]}"						#printing second element of array
 
