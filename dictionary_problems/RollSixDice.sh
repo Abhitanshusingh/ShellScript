@@ -1,4 +1,5 @@
 #!/bin/bash -x
+#declare variables
 key1=1
 key2=2
 key3=3
@@ -11,39 +12,39 @@ count3=0
 count4=0
 count5=0
 count6=0
-
-declare -A number
+#Using dictionary to count number of value 
+declare -A Dicegame
 while(true)
 do
-	dice=$((RANDOM%6+1))
-	case $dice in
+	Dicegame=$((RANDOM%6+1))
+	case $Dicegame in
 	1)
 		count1=$((count1+1))
-		number[$key1]="$count1"
+		Dicegame[$key1]="$count1"
 		;;
 	2)
 		count2=$((count2+1))
-		number[$key2]="$count2"
+		Dicegame[$key2]="$count2"
 		;;
 
 	3)
 		count3=$((count3+1))
-		number[$key3]="$count3"
+		Dicegame[$key3]="$count3"
 		;;
 
 	4)
 		count4=$((count4+1))
-		number[$key4]="$count4"
+		Dicegame[$key4]="$count4"
 		;;
 
 	5)
 		count5=$((count5+1))
-		number[$key5]="$count5"
+		Dicegame[$key5]="$count5"
      		;;
 
 	6)
 		count6=$((count6+1))
-		number[$key6]="$count6"
+		Dicegame[$key6]="$count6"
 		;;
 	esac
 
@@ -53,24 +54,25 @@ do
 	fi
 done
 
-echo " ${!number[@]} : ${number[@]}  "
-
+echo " ${!Dicegame[@]} : ${Dicegame[@]}  "
+#Finding maximum value
 max=0
 for(( i=1 ; i <= 6 ; i++ ))
 do
-	if((  $max < "${number[$i]}"  ))
+	if((  $max < "${Dicegame[$i]}"  ))
 	then
-	   max="${number[$i]}"
+	   max="${Dicegame[$i]}"
 	fi
 done
 echo "Maximum value is : $max"
 
+#Finding minimum value
 min=11
 for(( i=1 ; i <= 6 ; i++ ))
 do
-   if((  $min > "${number[$i]}"  ))
+   if((  $min > "${Dicegame[$i]}"  ))
    then
-       min="${number[$i]}"
+       min="${Dicegame[$i]}"
    fi
 done
 echo "Minimum value is : $min"
