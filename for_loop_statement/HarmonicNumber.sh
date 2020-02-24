@@ -1,10 +1,11 @@
 #!/bin/bash -x
-echo $1
-number=$1
-harmonic_number=0
-for(( iter=1 ; iter <= $number ; iter++ ))
-do 
-   harmonic_number=`echo "$harmonic_number + 1 / $iter" | bc -l`
+#Taking command-line argument
+userInput=$1
+harmonicNumber=0
+#logic for harmonic number
+for(( iterator=1 ; iterator <= "$userInput" ; iterator++ ))
+do
+   harmonicNumber=`echo "scale=4; $harmonicNumber + 1 / $iterator" | bc -l`	#using scale to print only 4 digit fractional value
 done
-echo "$harmonic_number"
+echo "$harmonicNumber"
 
