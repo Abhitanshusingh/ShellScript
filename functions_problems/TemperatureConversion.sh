@@ -1,39 +1,39 @@
 #!/bin/bash -x
-function CelsiusToFarenhit()
+function celsiusToFarenhit()
 {
-	read -p "Enter Celsius Temperature:" CelsiusTemp
-	if (( $((CelsiusTemp>=0 && CelsiusTemp<=100 )) ))
+	read -p "Enter celsius temperature:" celsiusTemp
+	if (( $((celsiusTemp>=0 && celsiusTemp<=100 )) ))
 	then
-		Farenhit=`echo "scale=4;(($CelsiusTemp*9/5))+32" | bc -l`
-		echo "temperature in Farenhit is:"`echo "scale=3; $Farenhit" | bc -l`
+		farenhit=`echo "scale=4;(($celsiusTemp*9/5))+32" | bc -l`
+		echo "Temperature in farenhit is:"`echo "scale=3; $farenhit" | bc -l`
 	else
-		 echo "Enter between 0 to 100 celsius temperature "	
+		 echo "Enter between 0 to 100 Celsius temperature "
 	fi
 }
 
 
-function FarenhitToCelsius()
+function farenhitToCelsius()
 {
-read -p "Enter Farenhit Temperature:" FarenhitTemp
-	if (($FarenhitTemp>=32 && $FarenhitTemp<=212))
+read -p "Enter farenhit temperature:" farenhitTemp
+	if (($farenhitTemp>=32 && $farenhitTemp<=212))
 	then
-		Celsius=`echo "scale=4;(($FarenhitTemp-32)) *5/9" | bc -l`
-		echo "temperature in Celsius is:"`echo "scale=3; $Celsius" | bc -l`
-	else	
+		celsius=`echo "scale=4;(($farenhitTemp-32)) *5/9" | bc -l`
+		echo "Temperature in celsius is:"`echo "scale=3; $celsius" | bc -l`
+	else
 		echo "Enter between 32 to 212 farenhit temperature"
 	fi
 }
 
 
-echo "1.Celsius To Farenhit"
-echo "2.Farenhit To Celsius"
+echo "1.Celsius to farenhit"
+echo "2.Farenhit to celsius"
 read -p "Enter number:" user_input
 case $user_input in
 	1)
-   CelsiusToFarenhit
+   celsiusToFarenhit
 	;;
 	2)
-   FarenhitToCelsius
+   farenhitToCelsius
 	;;
 	*)
 	echo "Invalid Input"
