@@ -1,5 +1,6 @@
 #!/bin/bash -x
 read -p 'Enter One Digit Number :' digit
+#taking only one digit number
 if (( $digit >= 10 ))
 then
    echo "Enter one digit number "
